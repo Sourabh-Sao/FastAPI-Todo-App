@@ -11,6 +11,5 @@ app = FastAPI(title="Smart Task Manager")
 def on_startup():
     create_db_and_table()
 
-# Router ko app ke saath jodein
-# prefix="/todos" ka matlab hai ki saare urls automatic /todos/ se start honge
+
 app.include_router(todo_routers.router, prefix="/todos", tags=["Tasks"])
